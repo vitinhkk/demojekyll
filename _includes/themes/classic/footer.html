@@ -3,8 +3,8 @@
       <div class="container">
         <div class="row">
 					<div class="col-xs-6 col-md-4 col-lg-3">
-					{% for item in site.tags %}
-						<li><a href="#{{item[0]|slugify:'pretty'}}">{{item[0]}}</a><span class="badge">{{item[0]|size}}</span></li>
+					{% for tag in site.tags %}
+						<li><a href="#{{tag[0]|slugify:'pretty'}}">{{tag[0]}}</a><span class="badge">{{tag[0]|size}}</span></li>
 					{% endfor %}
 					</div>
 					<div class="col-xs-6 col-md-4 col-lg-3">col-xs-6 col-md-4 col-lg-3</div>
