@@ -2,6 +2,17 @@
 layout: page
 title: debug
 ---
-{% for cat in site.categories %}
-cat:{{cat|first}}-so:{{cat|size}}<br>
-{% endfor %}
+
+{% capture cats %}
+  {% for cat in site.categories %}
+    {{ cat[0] }}
+  {% endfor %}
+{% endcapture %}
+{% assign sorted_cats = cats | split:' ' | sort %}
+<hr>
+{% capture tags %}
+  {% for tag in site.tags %}
+    {{ tag[0] }}
+  {% endfor %}
+{% endcapture %}
+{% assign sorted_tags = tags | split:' ' | sort %}
