@@ -1,0 +1,11 @@
+---
+layout: page
+title: debug
+---
+{% for cat in site.categories %}
+cat:{{cat}}-so:{{cat|size}}<br>
+{% endfor %}
+<hr>
+{% for tag in site.tags %}
+tag:{{tag}}-so:{{tag|size}}<br>
+{% endfor %}
