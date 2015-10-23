@@ -11,7 +11,7 @@ title: debug
 {% assign data_sorted = data | split:',' | sort %}
 
 {% for item in data_sorted %}
-  <h3>{{item}}</h3>
+  <h3>{{item[0]}}</h3>
   <ul>
   {% for post in site.categories[item] %}
     <li>
