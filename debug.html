@@ -8,15 +8,15 @@ title: debug
     {{ item[0] }}
   {% endfor %}
 {% endcapture %}
-{% assign data_sorted = data | split:' ' | sort %}
+{% assign data_sorted = data | split:',' | sort %}
 
 {% for item in data_sorted %}
   <h3>{{item}}</h3>
-  <ul>
+  <!--ul>
   {% for post in site.categories[item] %}
     <li>
       {{post.title}}
     </li>
   {% endfor %}
-  </ul>
+  </ul-->
 {% endfor %}
