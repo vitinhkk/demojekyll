@@ -28,7 +28,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
 					{% for cat in site.categories %}
-						<li><a href="#{{cat|replace:' ','-'|escape}}">{{cat[0]}}</a></li>
+						<li><a href="#{{cat|first|slugize}}">{{cat|first}}</a></li>
 					{% endfor %}
           </ul>
         </div><!--/.nav-collapse -->
