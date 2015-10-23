@@ -2,7 +2,11 @@
 		<footer>
       <div class="container">
         <div class="row">
-					<div class="col-xs-6 col-md-4 col-lg-3">col-xs-6 col-md-4 col-lg-3</div>
+					<div class="col-xs-6 col-md-4 col-lg-3">
+					{% for item in site.tags %}
+						<li><a href="#{{item[0]|url_escape}}">{{item[0]}}</a><span class="bagde">{{item[0]|size}}</span></li>
+					{% endfor %}
+					</div>
 					<div class="col-xs-6 col-md-4 col-lg-3">col-xs-6 col-md-4 col-lg-3</div>
 					<div class="col-xs-6 col-md-4 col-lg-3">col-xs-6 col-md-4 col-lg-3</div>
 					<div class="col-xs-6 col-md-4 col-lg-3 hidden-md">hidden-md col-xs-6 col-md-4 col-lg-3</div>
