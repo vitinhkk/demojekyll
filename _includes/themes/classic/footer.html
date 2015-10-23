@@ -4,7 +4,7 @@
         <div class="row">
 					<div class="col-xs-6 col-md-4 col-lg-3">
 					{% for item in site.tags %}
-						<li><a href="#{{item[0]|url_escape}}">{{item[0]}}</a><span class="badge">{{item[0]|size}}</span></li>
+						<li><a href="#{{item[0]|slugify|replace:'-',' '}}">{{item[0]}}</a><span class="badge">{{item[0]|size}}</span></li>
 					{% endfor %}
 					</div>
 					<div class="col-xs-6 col-md-4 col-lg-3">col-xs-6 col-md-4 col-lg-3</div>
