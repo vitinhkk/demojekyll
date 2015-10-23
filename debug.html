@@ -11,12 +11,12 @@ title: debug
 {% assign data_sorted = data | split:',' | sort %}
 
 {% for item in data_sorted %}
-  <h3>{{item}} -co: {{item|size}}</h3><br>
-  <!--ul>
+  <h3>{{item}}</h3>
+  <ul>
   {% for post in site.categories[item] %}
     <li>
       {{post.title}}
     </li>
   {% endfor %}
-  </ul-->
+  </ul>
 {% endfor %}
