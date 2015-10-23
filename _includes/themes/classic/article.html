@@ -1,0 +1,8 @@
+<div class="container">
+	<div class="row">
+	{{page.title}}
+	{% if page.thumb %}<img src="{{site.baseurl}}/{{page.thumb}}" />{% endif %}
+	{% if page.price %} {{page.price}} {% endif %}
+	<div>{{content}}</div>
+	</div>
+</div>
