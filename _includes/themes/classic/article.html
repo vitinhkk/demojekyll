@@ -17,8 +17,7 @@
 	<div class="row">
 	{% for tag in page.tags %}
 	<span class="label label-info">
-		<a href="{{site.baseurl}}/tag#{{ tag | first | remove:' ' }}">{{tag[0]}}</a> 
-		<i class='badge'>{{tag[1].size}}</i>
+		<a href="{{site.baseurl}}/tag#{{ tag | first | remove:' ' }}">{{tag}}</a> 
 	</span>
 	{% endfor %}
 	</div>
