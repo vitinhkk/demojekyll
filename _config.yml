@@ -5,6 +5,7 @@ theme: "classic"
 
 # Build settings
 markdown: kramdown
-permalink: /:title:output_ext
+# permalink: ordinal
+permalink: /:categories/:title-090xx.html
 excerpt_separator: "\n\n"
 paginate: 12

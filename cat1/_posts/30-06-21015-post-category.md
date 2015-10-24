@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bai viet dau tien
+title: Bai viet da phan loai
 thumb: 300x200.png
 price: 10000
 tags:
