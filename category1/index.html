@@ -2,5 +2,5 @@
 layout: page
 title: Show post by category
 ---
-themes/{{site.theme}}/category.html
+{% assign name = page.path|split:'/'|first %}
 {% include themes/{{site.theme}}/category.html %}

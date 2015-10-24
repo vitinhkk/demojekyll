@@ -1,0 +1,12 @@
+<main class="container">
+<div class="row">
+  {% for post in site.categories.[name] %}
+  <div class="col-xs-6 col-md-4 col-lg-3">
+	<a href="{{post.url|prepend:site.baseurl}}">{{post.title}}</a>
+	{% if post.thumb %}
+	<img src="{{site.baseurl}}/thumb/{{post.thumb}}" class="img-responsive"/>
+	{% endif %}
+  </div>
+{% endfor %}
+</div>
+</main>
