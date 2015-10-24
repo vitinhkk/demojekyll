@@ -17,7 +17,7 @@
 	<div class="row">
 	{% for tag in page.tags %}
 	<span class="label label-info">
-		<a href="{{site.baseurl}}/tag#{{ tag | first | remove:' ' }}">{{tag}}</a> 
+		<a href="{{site.baseurl}}/tag#{{tag|remove:' '}}">{{tag}}</a> 
 	</span>
 	{% endfor %}
 	</div>
