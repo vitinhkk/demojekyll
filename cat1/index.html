@@ -1,8 +1,16 @@
 ---
 layout: page
-title: All post in cat1
+title: All post in {{page.path|split:'/'|first}}
 ---
 
 relative_path: {{page.path}}
 <hr>
 ok path: {{page.path|split:'/'|first}}
+<hr>
+{% assign name = page.path.split:'/' %}
+<li>{{name[0]}}</li>
+<li>{{name[1]}}</li>
+<hr>
+{% assign name = page.path|split:'/' %}
+<li>{{name[0]}}</li>
+<li>{{name[1]}}</li>
