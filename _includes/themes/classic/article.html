@@ -5,15 +5,24 @@
 <h3>{{page.title}}</h3>
 {{content}}
 <hr>
+<<<<<<< HEAD
 
 {% for cat in page.categories %}
 <h3>{{cat|first}}</h3>
+=======
+{% for cat in page.categories %}
+<h3>Cung chuyen muc: {{cat|first}}</h3>
+>>>>>>> c82c10b88cb29a5980528a319438cda19ead794c
 	{% for post in site.categories.['cat'] limit:5%}
 		{% include themes/{{site.theme}}/viewgrid.html %}
 	{% endfor %}
 {% endfor %}
+<<<<<<< HEAD
 
+=======
+>>>>>>> c82c10b88cb29a5980528a319438cda19ead794c
 <hr>
+
 {% for tag in page.tags %}
   <span class="label label-info">{{tag}}</span>
 {% endfor %}
