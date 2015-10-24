@@ -1,12 +1,14 @@
 <main class="container">
 <div class="row">
 {% for post in site.posts %}
-  <div class="col-xs-6 col-md-4 col-lg-3">
-	<a href="{{post.url|prepend:site.baseurl}}">{{post.title}}</a>
-	{% if post.thumb %}
-	<img src="{{site.baseurl}}/thumb/{{post.thumb}}" class="img-responsive"/>
-	{% endif %}
-  </div>
+  {% include themes/{{site.theme}}/viewgrid.html %}
 {% endfor %}
+</div>
+<div class="row">
+  <ol>
+{% for post in site.tags.hot %}
+  {% include themes/{{site.theme}}/viewlist.html %}
+{% endfor %}
+  </ol>
 </div>
 </main>
