@@ -1,16 +1,8 @@
 ---
 layout: page
-title: All post in {{page.path|split:'/'|first}}
+title: All post in category
 ---
 
-relative_path: {{page.path}}
-<hr>
-ok path: {{page.path|split:'/'|first}}
-<hr>
-{% assign name = page.path.split:'/' %}
-<li>{{name[0]}}</li>
-<li>{{name[1]}}</li>
-<hr>
-{% assign name = page.path|split:'/' %}
-<li>{{name[0]}}</li>
-<li>{{name[1]}}</li>
+<!--get first name folder
+<!--{{page.path|split:'/'|first}}-->
+{% include themes/{{site.theme}}/category.html cat=page.path|split:'/'|first %}
