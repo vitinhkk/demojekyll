@@ -1,6 +1,7 @@
 <main class="container">
 <div class="row">
-{% for post in site.posts %}
+{% assign name = page.path|split:'/'|first %}
+{% for post in site.categories.[name] %}
   {% include themes/{{site.theme}}/viewall.html %}
 {% endfor %}
 </div>

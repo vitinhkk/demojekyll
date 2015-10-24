@@ -1,15 +1,17 @@
 <div class="container">
-	<div class="row">
-		<div class="thumbnail">{% if page.price %} {{page.price}} {% endif %}
-		<h3>{{page.title}}</h3>
-		{{content}}
-		{% for cat in page.categories %}
-		{{cat}}
-		{% endfor %}
-		<hr>
-		{% for tag in page.tags %}
-		{{tag}}
-		{% endfor %}
-		</div>
-	</div>
+  <div class="row">
+	<div class="thumbnail">
+	  {% if page.price %} {{page.price}} {% endif %}
+<h3>{{page.title}}</h3>
+{{content}}
+<hr>
+{% for cat in page.categories %}
+  {{cat}}
+{% endfor %}
+<hr>
+{% for tag in page.tags %}
+  {{tag}}
+{% endfor %}
+    </div>
+  </div>
 </div>
