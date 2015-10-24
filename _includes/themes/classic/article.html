@@ -5,29 +5,14 @@
 <h3>{{page.title}}</h3>
 {{content}}
 <hr>
-<!--
 {% for cat in page.categories %}
-<h3>{{cat|first}}</h3>
-	{% for post in site.categories['cat'] limit:5%}
+<h3>Cung chuyen muc: {{cat|first}}</h3>
+	{% for post in site.categories.['cat'] limit:5%}
 		{% include themes/{{site.theme}}/viewgrid.html %}
 	{% endfor %}
 {% endfor %}
--->
-{% for cat in page.categories %}
-	<div class="catbloc" id="{{ cat | first | remove:' ' }}">
-	<h3>{{cat[0]}}</h3>
-	<ol>
-	{% for posts in cat %}
-		{% for post in posts %}
-			{% if post.url %}
-			<li><a href="{{site.baseurl}}{{post.url}}"><time>{{ post.date | date: "%-d %B %Y" }}</time> - {{ post.title }}</a></li>
-			{% endif %}
-		{% endfor %}
-	{% endfor %}
-	</ol>
-	</div>
-{% endfor %}
 <hr>
+
 {% for tag in page.tags %}
   <span class="label label-info">{{tag}}</span>
 {% endfor %}
