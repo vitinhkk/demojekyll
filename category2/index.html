@@ -1,0 +1,11 @@
+---
+layout: page
+title: All post in category
+---
+
+<!--get first name folder
+<!--{{page.path|split:'/'|first}}-->
+{% assign name = page.path|split:'/'|first %}
+{% for p in site.categories.name %}
+<li>{{post.title}}</li>
+{% endfor %}
