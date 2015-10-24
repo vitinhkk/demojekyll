@@ -3,11 +3,11 @@
 		<div class="thumbnail">{% if page.price %} {{page.price}} {% endif %}
 		<h3>{{page.title}}</h3>
 		{{content}}
-		{% for cat in post.categories %}
+		{% for cat in page.categories %}
 		{{cat}}
 		{% endfor %}
 		<hr>
-		{% for tag in post.tags %}
+		{% for tag in page.tags %}
 		{{tag}}
 		{% endfor %}
 		</div>
