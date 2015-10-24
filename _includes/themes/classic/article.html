@@ -5,12 +5,15 @@
 <h3>{{page.title}}</h3>
 {{content}}
 <hr>
+<h3>Bai viet cung chuyen muc</h3>
 {% for cat in page.categories %}
-  {{cat}}
+	{% for post in site.categories['cat'] limit:5%}
+		{% include themes/{{site.theme}}/viewgrid.html %}
+	{% endfor %}
 {% endfor %}
 <hr>
 {% for tag in page.tags %}
-  {{tag}}
+  <span class="label label-info">{{tag}}</span>
 {% endfor %}
     </div>
   </div>
