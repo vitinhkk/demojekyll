@@ -4,7 +4,7 @@
         <div class="row">
 					<div class="col-xs-6 col-md-4 col-lg-3">
 					{% for tag in site.tags %}
-					<!--{{site.baseurl}}/tag#{{tag[0]}}-->
+					<!--{{site.baseurl}}/tag#{{tag[0]}}--{{ category | first | remove:' ' }}-->
 						<li><a href="#">{{tag[0]}} <span class='badge'>{{tag[1].size}}</span></a></li>
 					{% endfor %}
 					</div>
