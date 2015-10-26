@@ -9,7 +9,6 @@
 	</div>
 	<div class="row">
 		{% for cat in page.categories %}
-		<h3>Cung chuyen muc : {{cat}}</h3>
 			{% for post in site.categories[cat] limit:5%}
 				{% include themes/{{site.theme}}/viewgrid.html %}
 			{% endfor %}
