@@ -1,0 +1,7 @@
+---
+layout: page
+title: Show post by category
+---
+{% assign name = page.path|split:'/'|first %}
+<h3>{{name}}</h3>
+{% include themes/{{site.theme}}/category.html %}
