@@ -4,9 +4,9 @@
 		{% assign k = post.price|divided_by:1000%}
 		{% assign m = post.price|divided_by:1000000%}
 {% if m > 1 %}
-  {{m}}M
+  ~{{m}}M
 {% elsif k > 1 %}
-  {{k}}K
+  ~{{k}}K
 {% endif %}
 		</span>
 		<a href="{{post.url|prepend:site.baseurl}}"><span class="well well-sm">{{post.title}}</span></a>
