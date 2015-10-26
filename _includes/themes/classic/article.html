@@ -1,8 +1,9 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
 		<div class="thumbnail">
 	  {% if page.price %}<span class="label label-danger">{{page.price}}</span>{% endif %}
-			<h3>{{page.title}}</h3>
+		<h3>{{page.title}}</h3>
+		<img src="{{site.baseurl}}/thumb/{{page.thumb}}" class="img-responsive"/>
 			{{content}}
     </div>
 	</div>
