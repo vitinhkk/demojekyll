@@ -1,21 +1,25 @@
 <div class="container-fluid">
   <div class="row">
 		<div class="col-md-9">
-			<div class="thumbnail">
-			<img align="left" src="{{site.baseurl}}/thumb/{{page.thumb}}" class="img-thumbnail"/>
-			{% if page.price %}<span class="label label-danger">{{page.price}}</span>{% endif %}
-			<h3>{{page.title}}</h3>
-				{{content}}
+			<div class="row">
+				<div class="thumbnail">
+				<img align="left" src="{{site.baseurl}}/thumb/{{page.thumb}}" class="img-thumbnail"/>
+				{% if page.price %}<span class="label label-danger">{{page.price}}</span>{% endif %}
+				<h3>{{page.title}}</h3>
+					{{content}}
+				</div>
 			</div>
 		</div>
 		<div class="col-md-3">
-		<ol>
-		{% for cat in page.categories %}
-			{% for post in site.categories[cat] limit:5%}
-				{% include themes/{{site.theme}}/viewlist.html %}
-			{% endfor %}
-		{% endfor %}
-		</ol>
+			<div class="row">
+				<ol>
+				{% for cat in page.categories %}
+					{% for post in site.categories[cat] limit:5%}
+						{% include themes/{{site.theme}}/viewlist.html %}
+					{% endfor %}
+				{% endfor %}
+				</ol>
+			</div>
 		</div>
-	</div>
+	</div><!-- .row -->
 </div>
