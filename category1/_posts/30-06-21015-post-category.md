@@ -2,7 +2,7 @@
 layout: post
 title: Bai viet da phan loai
 thumb: 300x200.png
-price: 10000
+price: 12001000
 tags:
 - hot
 - "Chùm thẻ"
