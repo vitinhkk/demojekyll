@@ -1,5 +1,5 @@
 <div class="col-xs-6 col-md-4 col-lg-3">
-	<div class="row thumbnail">
+	<div class="row">
 		{% if post.price %}	
 		<span class="badge pull-right">
 		{% assign k = post.price|divided_by:1000%}
@@ -9,9 +9,9 @@
 		{% endif %}
 		</span>
 		{% endif %}		
-		<a href="{{post.url|prepend:site.baseurl}}"><span class="well well-sm">{{post.title}}</span></a>
+		<a href="{{post.url|prepend:site.baseurl}}"><span class="label label-info">{{post.title}}</span></a>
 		{% if post.thumb %}
-		<img src="{{site.baseurl}}/thumb/{{post.thumb}}" class="img-responsive"/>
+		<img src="{{site.baseurl}}/thumb/{{post.thumb}}" class="img-thumbnail"/>
 		{% endif %}
 	</div>
 </div>
