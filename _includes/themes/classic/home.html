@@ -1,9 +1,9 @@
 <main class="container-fluid">
-{% for post in site.posts %}
 <div class="row">
+{% for post in site.posts %}
   {% include themes/{{site.theme}}/viewgrid.html %}
-</div>
 {% endfor %}
+</div>
 <div class="row">
   <ol>
 {% for post in site.tags.hot %}
