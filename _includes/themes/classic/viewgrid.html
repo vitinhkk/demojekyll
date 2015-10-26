@@ -3,9 +3,9 @@
 		<span class="badge pull-right">
 		{% assign k = post.price|divided_by:1000%}
 		{% assign m = post.price|divided_by:1000000%}
-{% if m > 1 %}
+{% if m >= 1 %}
   ~{{m}}M
-{% elsif k > 1 %}
+{% elsif k >= 1 %}
   ~{{k}}K
 {% endif %}
 		</span>
