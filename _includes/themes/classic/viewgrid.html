@@ -3,8 +3,11 @@
 		<span class="badge pull-right">
 		{% assign k = post.price|divided_by:1000%}
 		{% assign m = post.price|divided_by:1000000%}
-		{% if k > 1 %}~{{k}}K{% endif %}
-		{% if m > 1 %}~{{k}}M{% endif %}
+{% if m > 1 %}
+  {{m}}M
+{% elsif k > 1 %}
+  {{k}}K
+{% endif %}
 		</span>
 		<a href="{{post.url|prepend:site.baseurl}}"><span class="well well-sm">{{post.title}}</span></a>
 		{% if post.thumb %}
