@@ -2,9 +2,9 @@
   <div class="row">
 		<div class="col-md-9">
 			<div class="thumbnail">
+			<img align="left" src="{{site.baseurl}}/thumb/{{page.thumb}}" class="img-thumbnail"/>
 			{% if page.price %}<span class="label label-danger">{{page.price}}</span>{% endif %}
 			<h3>{{page.title}}</h3>
-			<img src="{{site.baseurl}}/thumb/{{page.thumb}}" class="img-responsive"/>
 				{{content}}
 			</div>
 		</div>
