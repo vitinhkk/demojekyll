@@ -1,7 +1,7 @@
-<div class="col-xs-6 col-md-4 col-lg-3">
-	<div class="bg-info">
-		<span class="badge">{{post.price}}</span>
-		<a href="{{post.url|prepend:site.baseurl}}"><span class="">{{post.title/1000}}</span></a>
+<div class="col-xs-6 col-md-4 col-lg-3 bg-info">
+	<div class="row">
+		<span class="badge">{{post.price/1000}}</span>
+		<a href="{{post.url|prepend:site.baseurl}}"><span class="">{{post.title}}</span></a>
 		{% if post.thumb %}
 		<img src="{{site.baseurl}}/thumb/{{post.thumb}}" class="img-responsive"/>
 		{% endif %}
