@@ -28,7 +28,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
 					{% for cat in site.categories %}
-						<li><a href="{{site.baseurl}}/{{cat[0]|url_param_escape}}">{{cat[0]}}</a></li>
+						<li><a href="{{site.baseurl}}/{{cat[0]}}">{{cat[0]|upcase}}</a></li>
 					{% endfor %}
           </ul>
         </div><!--/.nav-collapse |uri_escape-->

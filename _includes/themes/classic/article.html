@@ -14,11 +14,4 @@
 			{% endfor %}
 		{% endfor %}
 	</div>
-	<div class="row">
-	{% for tag in page.tags %}
-	<span class="label label-info">
-		<a href="{{site.baseurl}}/tag#{{tag|remove:' '}}">{{tag}}</a> 
-	</span>
-	{% endfor %}
-	</div>
 </div>
