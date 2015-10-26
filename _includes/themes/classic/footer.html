@@ -9,7 +9,7 @@
 				<div class="col-xs-6 col-md-4 col-lg-3">
 					<ul>
 					{% for tag in site.tags limit=5 %}
-						<li><a href="#">{{tag|last}}</a><span class="badge">{{tag|last|size}}</span></li>
+						<li><a href="#">{{tag[0]}}</a><span class="badge">{{tag|last|size}}</span></li>
 					{% endfor %}
 					</ul>
 				</div>
