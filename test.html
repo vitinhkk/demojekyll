@@ -1,4 +1,4 @@
-			<div class="row">
+
 <script>
 $.get('http://stackoverflow.com/feeds/question/10943544', function (data) {
     $(data).find("entry").each(function () { // or "item" or whatever suits your feed
@@ -10,5 +10,6 @@ $.get('http://stackoverflow.com/feeds/question/10943544', function (data) {
         console.log("description: " + el.find("description").text());
     });
 });
+$('#rss-viewer').append(aDocumentFragmentEntry);
 </script>
-			</div>
+<div id="rss-viewer"></div>
