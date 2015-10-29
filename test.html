@@ -1,15 +1,29 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
 
-<script>
-$.get('http://stackoverflow.com/feeds/question/10943544', function (data) {
-    $(data).find("entry").each(function () { // or "item" or whatever suits your feed
-        var el = $(this);
+    google.load("feeds", "1");
 
-        console.log("------------------------");
-        console.log("title      : " + el.find("title").text());
-        console.log("author     : " + el.find("author").text());
-        console.log("description: " + el.find("description").text());
-    });
-});
-$('#rss-viewer').append(aDocumentFragmentEntry);
-</script>
-<div id="rss-viewer"></div>
+    function initialize() {
+      var feed = new google.feeds.Feed("http://fastpshb.appspot.com/feed/1/fastpshb");
+      feed.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("feed");
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+            var div = document.createElement("div");
+            div.appendChild(document.createTextNode(entry.title));
+            container.appendChild(div);
+          }
+        }
+      });
+    }
+    google.setOnLoadCallback(initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="feed"></div>
+  </body>
+</html>
