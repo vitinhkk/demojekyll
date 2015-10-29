@@ -1,31 +1,37 @@
 <html>
-  <head>
-	<title>google feed api</title>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
+<head>
+    <meta charset="utf-8" />
+    <title>New own RSS reader demonstration</title>
+    <meta name="author" content="Script Tutorials" />
+    <link rel="stylesheet" type="text/css" href="https://www.script-tutorials.com/demos/82/css/main.css" />
+    <script type="text/javascript" src="https://www.script-tutorials.com/demos/82/js/main.js"></script>
+</head>
+ <body>
+    <div class="example">
+        <div class="post_results" id="post_results1" rss_num="8" rss_url="http://rss.news.yahoo.com/rss/topstories">
+            <div class="loading_rss">
+                <img alt="Loading..." src="https://www.script-tutorials.com/demos/82/images/loading.gif" />
+            </div>
+        </div>
 
-    google.load("feeds", "1");
+        <div class="post_results" id="post_results2" rss_num="8" rss_url="http://newsrss.bbc.co.uk/rss/newsonline_world_edition/front_page/rss.xml">
+            <div class="loading_rss">
+                <img alt="Loading..." src="https://www.script-tutorials.com/demos/82/images/loading.gif" />
+            </div>
+        </div>
 
-    function initialize() {
-      var feed = new google.feeds.Feed("http://vnexpress.net/rss/phap-luat.rss");
-      feed.load(function(result) {
-        if (!result.error) {
-          var container = document.getElementById("feed");
-          for (var i = 0; i < result.feed.entries.length; i++) {
-            var entry = result.feed.entries[i];
-            var div = document.createElement("div");
-						div.appendChild(document.createTextNode(entry.link));
-            div.appendChild(document.createTextNode(entry.title));
-            container.appendChild(div);
-          }
-        }
-      });
-    }
-    google.setOnLoadCallback(initialize);
+        <div style="clear:both;"></div>
+    </div>
 
-    </script>
-  </head>
-  <body>
-    <div id="feed"></div>
-  </body>
+    <div style="bottom:0;position:fixed;">
+        <hr style="clear:both;" />
+        <h4>
+            <a href="https://www.script-tutorials.com/creating-own-rss-reader-using-google-feed-api/">back to original article page</a>
+        </h4>
+    </div>
+
+    <!-- Only used for Script Tutorial's Demo site. Please ignore and remove. -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script> 
+
+ </body>
 </html>
